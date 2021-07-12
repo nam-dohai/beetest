@@ -28,5 +28,9 @@
     "web": {
       "favicon": "./assets/favicon.png"
     }
-  }
+  },
+  "facebookScheme":"fb902167530641914",
+  "facebookAppId": "902167530641914",
+  "facebookDisplayName": "TestLogin"
+  
 }

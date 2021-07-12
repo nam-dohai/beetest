@@ -1,23 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import RootTab from './navigation/RootTab';
+import NavigationManager from './navigation/NavigationManager';
 
 export default function App() {
   return (
       <NavigationContainer>
-        <RootTab />
+        <NavigationManager/>
         <StatusBar style="auto" />
       </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

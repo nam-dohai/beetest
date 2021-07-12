@@ -1,15 +1,15 @@
-import * as firebase from 'firebase';
+import firebase from 'firebase/app';
 import '@firebase/auth';
 import '@firebase/firestore';
 
 var firebaseConfig = {
-    apiKey: "AIzaSyDSXQlkCxGb8kQRhrckkz-CyotFr2-66o0",
-    authDomain: "beetest-1ab31.firebaseapp.com",
-    projectId: "beetest-1ab31",
-    storageBucket: "beetest-1ab31.appspot.com",
-    messagingSenderId: "196582731000",
-    appId: "1:196582731000:web:7defadb3751a7a0b6e9f0d"
-};
+    apiKey: "AIzaSyC2pBDWExb54XgxUIwcZVfmkx__sK8Xmb0",
+    authDomain: "beetest-b060d.firebaseapp.com",
+    projectId: "beetest-b060d",
+    storageBucket: "beetest-b060d.appspot.com",
+    messagingSenderId: "166478415993",
+    appId: "1:166478415993:web:82e39ba3f6ec2558182ca8"
+  };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 export default firebase;
