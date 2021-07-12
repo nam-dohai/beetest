@@ -2,15 +2,12 @@ import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { Button } from 'react-native-paper';
 
-export default function MatchListScreen({navigation}) {
+export default function MatchProfileScreen({navigation}) {
     return (
-    <SafeAreaView style={styles.container}>
-      <Text>MatchListScreen</Text>
-      <Button mode="text" onPress={()=>navigation.navigate('Info')}>Go to Info</Button>
-      <StatusBar style="auto" />
-    </SafeAreaView>
+      <SafeAreaView style={styles.container}>
+        <Text>MatchProfileScreen</Text>
+      </SafeAreaView>
     )
 }
 
