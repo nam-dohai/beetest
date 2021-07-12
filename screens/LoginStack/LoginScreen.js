@@ -1,16 +1,10 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import { Button,View, Alert } from 'react-native'
 import styles from '../../assets/style/index'
 import * as Facebook from 'expo-facebook'
-import firebase from '../../firebase/config'
+import {firebase} from '../../firebase/config'
+import 'firebase/auth'
 
-firebase.auth().onAuthStateChanged(user => {
-  if (user != null) {
-    console.log('We are authenticated now!');
-  }
-
-  // Do other things
-});
 function LoginScreen({navigation}){
     async function logInFacebook() {
         try {
@@ -30,8 +24,7 @@ function LoginScreen({navigation}){
                 .signInWithCredential(credential)
                 .catch(error => {
                     Alert.alert(`Firebase Error: ${error}`);
-                });              
-            openHomeScreen();
+                });
           } else {
             // type === 'cancel'
           }
@@ -39,11 +32,11 @@ function LoginScreen({navigation}){
           alert(`Facebook Login Error: ${message}`);
         }
       }
+  
     function logInGoogle(){    
         openHomeScreen();
     }
     function openHomeScreen(){
-        navigation.navigate('Main');
     }
     return (
         <View styles={styles.container}>

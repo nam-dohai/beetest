@@ -1,13 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import NavigationManager from './navigation/NavigationManager';
+import {LoginScreen} from './screens/LoginStack';
+import RootTab from './navigation/RootTab';
+import user from './user';
+import { useReducer } from 'react';
 
 export default function App() {
   return (
-      <NavigationContainer>
-        <NavigationManager/>
-        <StatusBar style="auto" />
-      </NavigationContainer>
-  );
+    <NavigationContainer>
+    {user
+    ?(
+      <RootTab/>
+    )
+    :(
+      <LoginScreen/>
+    ) 
+    }
+    </NavigationContainer>
+  );  
 }
